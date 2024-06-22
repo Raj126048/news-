@@ -1,6 +1,6 @@
 
-import React ,{useContext, useEffect, useState} from 'react'
-import { DataContext } from './ContextProvider'
+import React ,{useEffect, useState} from 'react'
+
 import Header from './Header';
 import Error from './Error';
  const SingleNews = () => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import img2 from './b1.jpg'
-import { useNavigate } from 'react-router-dom'
+
 const NewCard = (props) => {
     
   return (

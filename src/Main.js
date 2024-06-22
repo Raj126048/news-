@@ -1,17 +1,17 @@
-import React, { useState ,useEffect ,useContext} from 'react'
-import axios from 'axios' 
+import React, { useState ,useEffect} from 'react'
+
 import NewCard from './NewCard';
 import ReactPaginate from 'react-paginate';
 import { useNavigate } from 'react-router-dom';
-import { DataContext } from './ContextProvider';
-import Error from './Error';
+
+
 const Main = (props) => {
 const [response,setResponse]=useState([]);
 
 
 const navigate=useNavigate();
   
-const data=useContext(DataContext);
+
 
 useEffect(()=>{
  
@@ -73,7 +73,7 @@ const [itemOffset, setItemOffset] = useState(0);
     
             {currentItems&&currentItems.map((item,key)=><div onClick={()=>{
               localStorage.setItem('news',JSON.stringify(item));
-              data.addData(JSON.stringify(item));
+             
 navigate('/news');
             }}><NewCard title={item.title} img={item.image} date={item.publishedAt} key={key} Category={props.Category} news={props.news}/></div>)}
             <ReactPaginate
